@@ -1,0 +1,49 @@
+
+html{
+    font-size: 14px;
+}
+
+img{
+    max-width: 100%;
+}
+
+// Placeholder for image
+
+
+.img-holder{
+    position: relative;
+    background: #ccc url('assets/logo-small.png') no-repeat center center;
+    background-size: 80px auto;
+    overflow:hidden;
+    display:block;
+    &:after{
+        content: '';
+        display: block;;
+        width: 100%;
+    }
+    
+    &.size-1by1{
+        &:after{
+            padding-top: 100%;
+        }
+    }
+    &.size-4by3{
+        &:after{
+            padding-top: 75%;
+        }
+    }
+    &.size-16by9{
+        &:after{
+            padding-top: 56.25%;
+        }
+    }
+    
+    img{
+        display: block;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+    }
+}
+
